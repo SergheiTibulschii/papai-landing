@@ -1,0 +1,57 @@
+.pa-content {
+    padding:5rem 0;
+
+    @media (min-width:$screen-sm-min) {
+        padding:14rem 0;
+    }
+
+    &.-rp {
+        padding:2rem 0;
+
+        @media (min-width:$screen-sm-min) {
+            padding:5rem 0;
+        }
+    }
+
+    &.-rt {
+        padding-top:3rem;
+
+        @media (min-width:$screen-sm-min) {
+            padding-top:7rem;
+        }
+    }
+
+    &.-rb {
+        padding-bottom:3rem;
+
+        @media (min-width:$screen-sm-min) {
+            padding-bottom:7rem;
+        }
+    }
+
+    &.-cp {
+        padding:0;
+    }
+
+    &.-ct {
+        padding-top:0;
+    }
+
+    &.-cb {
+        padding-bottom:0;
+    }
+}
+
+.pa-container {
+    --pa-container-padding:1.6rem;
+    padding:0 var(--pa-container-padding);
+
+    @media (min-width:$screen-sm-min) {
+        --pa-container-padding:9.6rem;
+    }
+
+    @media (min-width:$screen-ul-min) {
+        max-width:$screen-ul-min;
+        margin:0 auto;
+    }
+}

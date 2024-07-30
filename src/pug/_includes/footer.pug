@@ -1,0 +1,52 @@
+mixin footer(options)
+    - options = Object.assign({}, options)
+    footer.pa-footer&attributes(attributes)
+        .pa-footer-content
+            .pa-footer-container
+                .pa-footer-body
+                    .pa-footer-top
+                        .pa-footer-grid
+                            .pa-footer-grid-col
+                                .pa-footer-languages
+                                    a.pa-footer-language(href="/da/", class=options.lang !== "en" ? '-active' : '')
+                                        img(src="/assets/dk.png", alt="Danish")
+                                        span Danish
+                                    a.pa-footer-language(href="/", class=options.lang === "en" ? '-active' : '')
+                                        img(src="/assets/gb.png", alt="English")
+                                        span English
+                            .pa-footer-grid-col
+                                .pa-footer-navs
+                                    a.pa-footer-nav(href="/", data-scroll-to-target="#about"): span #{__[options.lang].section_bottom_about_us}
+                                    a.pa-footer-nav(href="/", data-scroll-to-target="#how"): span #{__[options.lang].section_bottom_how_it_works}
+                                    a.pa-footer-nav(href="/", data-scroll-to-target="#why"): span #{__[options.lang].section_bottom_why_papai}
+                            .pa-footer-grid-col
+                                .pa-footer-title #{__[options.lang].heading_contact}
+                                address
+                                    ul.pa-footer-info
+                                        -
+                                            const phone = '(+45) 61 76 07 72'
+                                            const email = 'info@papai.app'
+                                            const support = 'support@papai.app'
+                                        li #[strong Office:] !{__[options.lang].section_bottom_contacts_address}
+                                        li #[strong #{__[options.lang].section_bottom_contacts_telephone}:] #[a(href="tel:#{phone}") #{phone}]
+                                        li #[strong E-mail:] #[a(href="mailto:#{email}") #{email}]
+                                        li #[strong #{__[options.lang].section_bottom_contacts_customer_support}:] #[a(href="mailto:#{support}") #{support}]
+                            .pa-footer-grid-col
+                                a.pa-footer-logo(href="/", aria-label="Home")
+                                    +svgimage('/assets/logo-inverse.svg')
+                                .pa-footer-action
+                                    a.pa-btn.pa-btn_store.-sm
+                                        +svgicon('apple-btn')
+                    .pa-footer-bottom
+                        .pa-footer-bgrid
+                            .pa-footer-bgrid-col
+                                -
+                                    let termsOfUserLink = options.lang === 'en' ? 'https://docs.google.com/document/d/1AtLsT34bwzQVWwDYusKt6Vp8GT8Kf5jw' : 'https://docs.google.com/document/d/1NwJSMxIQ6BxoE1jPqC9inM6fQRIISDG4'
+                                a.pa-footer-link(href=termsOfUserLink, target="_blank") #{__[options.lang].section_bottom_contacts_terms_of_use_and_privacy_policy}
+                            .pa-footer-bgrid-col
+                                .pa-footer-text © 2024 Papai ApS
+                            .pa-footer-bgrid-col
+                                .pa-footer-socials
+                                    a.pa-footer-social(href="https://www.instagram.com/papai.app/", target="_blank", rel="noopener", title="Instagram"): +svgicon('instagram')
+                                    a.pa-footer-social(href="https://www.facebook.com/profile.php?id=61560480525803", target="_blank", rel="noopener", title="Facebook"): +svgicon('facebook')
+                                    a.pa-footer-social(href="https://www.linkedin.com/company/103606251/admin/feed/posts/?feedType=following", target="_blank", rel="noopener", title="LinkedIn"): +svgicon('linkedin')

@@ -1,0 +1,39 @@
+.pa-input {
+    $root:&;
+
+    &_underline {
+        $this:&;
+
+        input {
+            margin:0;
+            padding:1.3rem 0;
+            width:100%;
+
+            color:$color-text;
+            background:none;
+            border:0;
+            border-bottom:1px solid;
+            border-radius:0;
+            outline:none;
+
+            font-size:1.6rem;
+            line-height:1;
+
+            transition:border-color 0.4s;
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:focus {
+                -webkit-background-clip:text;
+                -webkit-text-fill-color:$color-text;
+            }
+
+            &:hover {
+                border-bottom-color:rgba($color-text, 0.7);
+            }
+
+            &:focus {
+                border-bottom-color:rgba($color-text, 0.5);
+            }
+        }
+    }
+}

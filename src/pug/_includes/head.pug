@@ -1,0 +1,10 @@
+meta(charset="utf-8")
+block title
+    title Title
+meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=3.0")
+link(rel="stylesheet", href="/assets/css/main.css?v=" + PACKAGE.version)
+link(rel="icon", href="/assets/favicon.ico", type="image/x-icon")
+//-if(NODE_ENV === "production")
+//-    style !{fs.readFileSync("./dist/assets/css/main.css")}
+//-else
+//-    link(rel="stylesheet", href="/assets/css/main.css?v=" + PACKAGE.version)

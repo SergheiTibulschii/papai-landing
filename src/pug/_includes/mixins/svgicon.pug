@@ -1,0 +1,6 @@
+mixin svgicon(name, inline)
+    if(inline)
+        !=fs.readFileSync('./src/icons/' + name + '.svg')
+    else
+        svg(class="pa-svgsprite -" + name)&attributes(attributes)
+            use(xlink:href="/assets/sprites/svgsprites.svg#" + name)

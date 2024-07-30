@@ -1,0 +1,28 @@
+/*
+    100: Thin
+    200: Extra Light (Ultra Light)
+    300: Light
+    400: Normal (Regular)
+    500: Medium
+    600: Semi Bold (Demi Bold)
+    700: Bold
+    800: Extra Bold (Ultra Bold)
+    900: Black (Heavy)
+*/
+
+/* Custom Font */
+@font-face {
+    font-family: 'SF-Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'SF-Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format('woff');
+}

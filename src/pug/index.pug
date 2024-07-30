@@ -1,0 +1,150 @@
+extends /_includes/layout
+
+block title
+    title Papai — Home
+    meta(name="description", content="")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(property="twitter:title", content="")
+    meta(property="twitter:description", content="")
+    meta(property="twitter:image", content="")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="")
+    meta(property="og:description", content="")
+    meta(property="og:image", content="")
+
+block content
+    +navbar({lang: "en"})
+
+    main#view-main
+        header.pa-hero
+            .pa-hero-content
+                .pa-hero-container
+                    .pa-hero-img
+                        img(src="/assets/home/hero/hero-image.jpg", alt)
+                    .pa-hero-header
+                        h1 Do you want to
+                        .pa-hero-items
+                            .pa-hero-item.-active go dancing
+                            .pa-hero-item go to the beach
+                            .pa-hero-item grab coffee
+                            .pa-hero-item play padel
+                            .pa-hero-item go bungee jump
+                            .pa-hero-item play board games
+                            .pa-hero-item watch football
+                        .pa-hero-emojis
+                            .pa-hero-emoji.-v1 🏅
+                            .pa-hero-emoji.-v2 🎾
+                            .pa-hero-emoji.-v3 🧘
+                            .pa-hero-emoji.-v4 👗
+
+        section.pa-feature
+            .pa-feature-content
+                .pa-feature-container
+                    .pa-feature-items#about
+                        .pa-feature-item
+                            .pa-feature-title Do what you love
+                            .pa-feature-img
+                                img(src="/assets/home/feature/1.jpg", srcset="/assets/home/feature/1@2x.jpg 2x", loading="lazy", alt)
+                            .pa-feature-description
+                                p Do the things you love with like-minded people.
+                        .pa-feature-item
+                            .pa-feature-title Discover new people
+                            .pa-feature-img
+                                img(src="/assets/home/feature/2.jpg", srcset="/assets/home/feature/2@2x.jpg 2x", loading="lazy", alt)
+                            .pa-feature-description
+                                p Get the social and physical boost you need! Hang out with like-minded people and build new connections to uplift your mood.
+                        .pa-feature-item
+                            .pa-feature-title Experience new things
+                            .pa-feature-img
+                                img(src="/assets/home/feature/3.jpg", srcset="/assets/home/feature/3@2x.jpg 2x", loading="lazy", alt)
+                            .pa-feature-description
+                                p Nurture your passions, explore interests, and craft connections to spark new adventures and create memories.
+
+        section.pa-brief
+            .pa-brief-content
+                .pa-brief-container
+                    .pa-brief-body
+                        .pa-brief-header
+                            h2
+                                span Do you want to...#[br]
+                                span Create opportunities and
+                                span #{' '}build new relations?#[br]
+                                span Download the app and join
+                        .pa-brief-img
+                            picture
+                                source(srcset="/assets/home/brief/1.svg" media="(min-width: 768px)")
+                                img(src="/assets/home/brief/1_xs.svg", alt)
+                            .pa-brief-action
+                                a.pa-btn.pa-btn_store
+                                    +svgicon('apple-btn')
+
+        section.pa-onboarding
+            .pa-onboarding-content
+                .pa-onboarding-container
+                    .pa-onboarding-header#how
+                        picture
+                            source(srcset="/assets/home/onboarding/5@2x.png 2x, /assets/home/onboarding/5.png 1x" media="(min-width: 768px)")
+                            img(src="/assets/home/onboarding/5_xs.png", srcset="/assets/home/onboarding/5_xs@2x.png 2x", loading="lazy", alt)
+                    .pa-onboarding-items
+                        .pa-onboarding-item
+                            .pa-onboarding-arrow.-v1
+                                picture
+                                    source(srcset="/assets/home/onboarding/6.svg" media="(min-width: 768px)")
+                                    img(src="/assets/home/onboarding/6_xs.svg",  alt)
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/1.png", srcset="/assets/home/onboarding/1@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 1. Download the app
+                            .pa-onboarding-description
+                                p Download Papai on your phone to start. The app is free
+                        .pa-onboarding-item
+                            .pa-onboarding-arrow.-v2
+                                picture
+                                    source(srcset="/assets/home/onboarding/7.svg" media="(min-width: 768px)")
+                                    img(src="/assets/home/onboarding/7_xs.svg",  alt)
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/2.png", srcset="/assets/home/onboarding/2@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 2. Explore and join activities
+                            .pa-onboarding-description
+                                p Explore activities on the map and request to join
+                        .pa-onboarding-item
+                            .pa-onboarding-arrow.-v3
+                                picture
+                                    source(srcset="/assets/home/onboarding/8.svg" media="(min-width: 768px)")
+                                    img(src="/assets/home/onboarding/8_xs.svg",  alt)
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/3.png", srcset="/assets/home/onboarding/3@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 3. Create activities
+                            .pa-onboarding-description
+                                p Create activities you want to do with others
+                        .pa-onboarding-item
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/4.png", srcset="/assets/home/onboarding/4@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 4. Manage your activities
+                            .pa-onboarding-description
+                                p Approve requests, invite people to join your activity…
+
+        section.pa-benefit
+            .pa-benefit-img
+                img(src="/assets/home/benefit/1@2x.png", alt)
+            .pa-benefit-images
+                img(src="/assets/home/benefit/4.png", srcset="/assets/home/benefit/4@2x.png 2x", alt)
+                img(src="/assets/home/benefit/5.png", srcset="/assets/home/benefit/5@2x.png 2x", alt)
+            .pa-benefit-emojis
+                +svgimage('/assets/home/benefit/emoji.svg')
+                .pa-benefit-emoji.-v1
+                    img(src="/assets/home/benefit/2.svg", alt)
+                .pa-benefit-emoji.-v2
+                    img(src="/assets/home/benefit/3.svg", alt)
+            .pa-benefit-content
+                .pa-benefit-container#why
+                    .pa-benefit-body
+                        .pa-benefit-header
+                            h2 Why Papai?
+                        .pa-benefit-description
+                            p Because is there anything more fabulous than discovering new people who want to do the same things as you, with you?  By joining Papai, you get to connect with people through shared interests and activities, meet offline and do things together.
+
+        +footer({lang: "en"})#contact

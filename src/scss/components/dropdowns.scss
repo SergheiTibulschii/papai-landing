@@ -1,0 +1,7 @@
+.pa-dropdown {
+    $root:&;
+
+    &_select {
+        $this:&;
+    }
+}

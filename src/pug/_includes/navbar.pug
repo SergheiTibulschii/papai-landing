@@ -1,0 +1,39 @@
+mixin navbar(options)
+    - options = Object.assign({}, options)
+    nav.pa-navbar&attributes(attributes)
+        .pa-navbar-fill
+        .pa-navbar-strip
+            .pa-navbar-container
+                .pa-navbar-grid
+                    .pa-navbar-grid-col.-left
+                        a.pa-navbar-logo(href="/", aria-label="Home")
+                            +svgimage('/assets/logo.svg')
+                    .pa-navbar-grid-col.-left
+                        .pa-navbar-navs
+                            a.pa-navbar-nav(href="/", data-scroll-to-target="#about"): span #{__[options.lang].heading_about_us}
+                            a.pa-navbar-nav(href="/", data-scroll-to-target="#how"): span #{__[options.lang].heading_how_it_works}
+                            a.pa-navbar-nav(href="/", data-scroll-to-target="#why"): span #{__[options.lang].section_buttom_why_papai}
+                            a.pa-navbar-nav(href="/", data-scroll-to-target="#contact"): span #{__[options.lang].heading_contact}
+                            .pa-navbar-nav.-dropdown
+                                if options.lang !== "en"
+                                    .pa-navbar-nav-toggle(href="/da/", class=options.lang !== "en" ? '-active' : '')
+                                        img(src="/assets/dk.png", alt="Danish")
+                                        span DA
+                                        span: +svgicon('chevron-down-o')
+                                else
+                                    .pa-navbar-nav-toggle(href="/", class=options.lang === "en" ? '-active' : '')
+                                        img(src="/assets/gb.png", alt="English")
+                                        span EN
+                                        span: +svgicon('chevron-down-o')
+                                .pa-navbar-nav-dropdown
+                                    .pa-navbar-nav-items
+                                        a.pa-navbar-nav-item(href="/da/", class=options.lang !== "en" ? '-active' : '')
+                                            img(src="/assets/dk.png", alt="Danish")
+                                            span DA
+                                        a.pa-navbar-nav-item(href="/", class=options.lang === "en" ? '-active' : '')
+                                            img(src="/assets/gb.png", alt="English")
+                                            span EN
+                        .pa-navbar-toggle
+                            button.pa-btn.pa-btn_menu(aria-label="Menu")
+                                span
+                                span

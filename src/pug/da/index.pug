@@ -1,0 +1,150 @@
+extends /_includes/layout
+
+block title
+    title Papai — Home
+    meta(name="description", content="")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(property="twitter:title", content="")
+    meta(property="twitter:description", content="")
+    meta(property="twitter:image", content="")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="")
+    meta(property="og:description", content="")
+    meta(property="og:image", content="")
+
+block content
+    +navbar({lang: "da"})
+
+    main#view-main
+        header.pa-hero
+            .pa-hero-content
+                .pa-hero-container
+                    .pa-hero-img
+                        img(src="/assets/home/hero/hero-image.jpg", alt)
+                    .pa-hero-header
+                        h1 #{__.da.section_one_picture_title}
+                        .pa-hero-items
+                            .pa-hero-item.-active #{__.da.section_one_picture_text_activity_one_title}
+                            .pa-hero-item #{__.da.section_one_picture_text_activity_two_title}
+                            .pa-hero-item #{__.da.section_one_picture_text_activity_three_title}
+                            .pa-hero-item #{__.da.section_one_picture_text_activity_four_title}
+                            .pa-hero-item #{__.da.section_one_picture_text_activity_five_title}
+                            .pa-hero-item #{__.da.section_one_picture_text_activity_six_title}
+                            .pa-hero-item #{__.da.section_one_picture_text_activity_seven_title}
+                        .pa-hero-emojis
+                            .pa-hero-emoji.-v1 🏅
+                            .pa-hero-emoji.-v2 🎾
+                            .pa-hero-emoji.-v3 🧘
+                            .pa-hero-emoji.-v4 👗
+
+        section.pa-feature
+            .pa-feature-content
+                .pa-feature-container
+                    .pa-feature-items#about
+                        .pa-feature-item
+                            .pa-feature-title #{__.da.section_two_about_us_picture_one_title}
+                            .pa-feature-img
+                                img(src="/assets/home/feature/1.jpg", srcset="/assets/home/feature/1@2x.jpg 2x", loading="lazy", alt)
+                            .pa-feature-description
+                                p #{__.da.section_two_about_us_picture_one_text}
+                        .pa-feature-item
+                            .pa-feature-title #{__.da.section_two_about_us_picture_two_title}
+                            .pa-feature-img
+                                img(src="/assets/home/feature/2.jpg", srcset="/assets/home/feature/2@2x.jpg 2x", loading="lazy", alt)
+                            .pa-feature-description
+                                p #{__.da.section_two_about_us_picture_two_text}
+                        .pa-feature-item
+                            .pa-feature-title #{__.da.section_two_about_us_picture_three_title}
+                            .pa-feature-img
+                                img(src="/assets/home/feature/3.jpg", srcset="/assets/home/feature/3@2x.jpg 2x", loading="lazy", alt)
+                            .pa-feature-description
+                                p #{__.da.section_two_about_us_picture_three_text}
+
+        section.pa-brief
+            .pa-brief-content
+                .pa-brief-container
+                    .pa-brief-body
+                        .pa-brief-header
+                            h2
+                                span #{__.da.section_three_download_the_app_1}
+                                span #{__.da.section_three_download_the_app_2}
+                                span #{' '}#{__.da.section_three_download_the_app_3}
+                                span #{__.da.section_three_download_the_app_4}
+                        .pa-brief-img
+                            picture
+                                source(srcset="/assets/home/brief/1.svg" media="(min-width: 768px)")
+                                img(src="/assets/home/brief/1_xs.svg", alt)
+                            .pa-brief-action
+                                a.pa-btn.pa-btn_store
+                                    +svgicon('apple-btn')
+
+        section.pa-onboarding
+            .pa-onboarding-content
+                .pa-onboarding-container
+                    .pa-onboarding-header#how
+                        picture
+                            source(srcset="/assets/home/onboarding/5_da@2x.png 2x, /assets/home/onboarding/5_da.png 1x" media="(min-width: 768px)")
+                            img(src="/assets/home/onboarding/5_da_xs.png", srcset="/assets/home/onboarding/5_da_xs@2x.png 2x", loading="lazy", alt)
+                    .pa-onboarding-items
+                        .pa-onboarding-item
+                            .pa-onboarding-arrow.-v1
+                                picture
+                                    source(srcset="/assets/home/onboarding/6.svg" media="(min-width: 768px)")
+                                    img(src="/assets/home/onboarding/6_xs.svg",  alt)
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/1.png", srcset="/assets/home/onboarding/1@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 1. #{__.da.section_four_how_it_works_print_screen_one_title}
+                            .pa-onboarding-description
+                                p #{__.da.section_four_how_it_works_print_screen_one_text}
+                        .pa-onboarding-item
+                            .pa-onboarding-arrow.-v2
+                                picture
+                                    source(srcset="/assets/home/onboarding/7.svg" media="(min-width: 768px)")
+                                    img(src="/assets/home/onboarding/7_xs.svg",  alt)
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/2.png", srcset="/assets/home/onboarding/2@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 2. #{__.da.section_four_how_it_works_print_screen_two_title}
+                            .pa-onboarding-description
+                                p #{__.da.section_four_how_it_works_print_screen_two_text}
+                        .pa-onboarding-item
+                            .pa-onboarding-arrow.-v3
+                                picture
+                                    source(srcset="/assets/home/onboarding/8.svg" media="(min-width: 768px)")
+                                    img(src="/assets/home/onboarding/8_xs.svg",  alt)
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/3.png", srcset="/assets/home/onboarding/3@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 3. #{__.da.section_four_how_it_works_print_screen_three_title}
+                            .pa-onboarding-description
+                                p #{__.da.section_four_how_it_works_print_screen_three_text}
+                        .pa-onboarding-item
+                            .pa-onboarding-img
+                                img(src="/assets/home/onboarding/4.png", srcset="/assets/home/onboarding/4@2x.png 2x", loading="lazy", alt)
+                            .pa-onboarding-title
+                                h3 4. #{__.da.section_four_how_it_works_print_screen_four_title}
+                            .pa-onboarding-description
+                                p #{__.da.section_four_how_it_works_print_screen_four_text}
+
+        section.pa-benefit
+            .pa-benefit-img
+                img(src="/assets/home/benefit/1@2x.png", alt)
+            .pa-benefit-images
+                img(src="/assets/home/benefit/4.png", srcset="/assets/home/benefit/4@2x.png 2x", alt)
+                img(src="/assets/home/benefit/5.png", srcset="/assets/home/benefit/5@2x.png 2x", alt)
+            .pa-benefit-emojis
+                +svgimage('/assets/home/benefit/emoji.svg')
+                .pa-benefit-emoji.-v1
+                    img(src="/assets/home/benefit/2.svg", alt)
+                .pa-benefit-emoji.-v2
+                    img(src="/assets/home/benefit/3.svg", alt)
+            .pa-benefit-content
+                .pa-benefit-container#why
+                    .pa-benefit-body
+                        .pa-benefit-header
+                            h2 #{__.da.section_five_why_papai_title}
+                        .pa-benefit-description
+                            p #{__.da.section_five_why_papai_text}
+
+        +footer({lang: "da"})#contact
